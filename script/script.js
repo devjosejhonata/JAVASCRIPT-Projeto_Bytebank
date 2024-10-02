@@ -21,4 +21,4 @@ async function conectaAPI() {
     console.log(conectaTrauzido)
 }
 
-conectaAPI();
+setInterval(() => conectaAPI(), 500);
