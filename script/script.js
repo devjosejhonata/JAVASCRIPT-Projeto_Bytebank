@@ -1,4 +1,5 @@
 
+//dados do grafico
 const graficoDolar = document.getElementById('graficoDolar');
 
 const graficoParaDolar = new Chart(graficoDolar, {
@@ -12,3 +13,12 @@ const graficoParaDolar = new Chart(graficoDolar, {
             }]
         },
 });
+
+//conectando com a api AwesomeAPI
+async function conectaAPI() {
+    const conecta = await fetch("https://economia.awesomeapi.com.br/json/last/USD-BRL");
+    const conectaTrauzido = await conecta.json();
+    console.log(conectaTrauzido)
+}
+
+conectaAPI();
