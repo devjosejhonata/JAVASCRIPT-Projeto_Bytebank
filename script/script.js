@@ -1,4 +1,6 @@
 
+import imprimeCotacao from "./imprimeCotacao.js";
+
 //dados do grafico
 const graficoDolar = document.getElementById('graficoDolar');
 
@@ -22,6 +24,7 @@ async function conectaAPI() {
     let tempo = geraHorario();
     let valor = conectaTraduzido.USDBRL.ask;
     adicionarDados(graficoParaDolar, tempo, valor);
+    imprimeCotacao("dolar", valor);
 }
 
 //horarios
